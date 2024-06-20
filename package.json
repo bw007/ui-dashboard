@@ -1,0 +1,15 @@
+{
+  "name": "ui-dashboard",
+  "version": "1.0.0",
+  "description": "Portfolio project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laziz",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "ts-node": "^10.9.2"
+  }
+}
