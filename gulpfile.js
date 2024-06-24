@@ -1,6 +1,11 @@
-const { watch } = require('gulp');
+const { src, dest } = require("gulp");
 
-watch(['src/*.js', '!input/something.js'], function(cb) {
-  // body omitted
-  cb();
-});
+const scss = require("gulp-sass")(require("sass"));
+
+function styles() {
+  return src("./src/scss/style.scss")
+  .pipe(scss())
+  .pipe(dest("./src/css/"));
+}
+
+exports.styles = styles;
