@@ -17,6 +17,7 @@
     "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-uglify-es": "^3.0.0",
     "sass": "^1.77.6",
     "swiper": "^11.1.4",
