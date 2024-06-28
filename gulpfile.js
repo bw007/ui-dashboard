@@ -30,7 +30,8 @@ async function tsCompile() {
   return tsProject.src()
     .pipe(tsProject())
     .js
-    .pipe(uglify())  // Minifikatsiya qilish
+    .pipe(concat("main.min.js"))
+    .pipe(uglify())
     .pipe(dest("dist/js/"))
     .pipe(browserSync.stream());
 }
