@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist/js"  // Kompilyatsiya qilingan fayllarni saqlash katalogi
+    "outDir": "dist/js"
   },
   "include": [
     "src/ts/**/*.ts"
