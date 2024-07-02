@@ -72,6 +72,7 @@ async function tsCompile() {
 
 async function images() {
   return src(path.src.img)
+    .pipe(imagemin())
     .pipe(dest(path.build.img));
 }
 
