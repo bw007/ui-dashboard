@@ -1,4 +1,31 @@
 aside.sidebar 
   a.sidebar__logo.logo(href="index.html")
     img.logo__img(src="./imgs/logo.png", alt="Dashboard logo")
-  
+  .sidebar__inner
+    img.sidebar__decor(src="./imgs/line-shape.svg", alt="")
+    nav.sidebar__nav.nav
+      ul.nav__list
+        li.nav__item: a.nav__link(href="index.html")
+          img(src="./imgs/home-icon.svg")
+          span Dashboard
+        li.nav__item: a.nav__link(href="#")
+          img(src="./imgs/home-icon.svg")
+          span Tables
+        li.nav__item: a.nav__link(href="#")
+          img(src="./imgs/home-icon.svg")
+          span Billing
+        li.nav__item: a.nav__link(href="#")
+          img(src="./imgs/home-icon.svg")
+          span RTL
+      h4.nav__heading.nav__heading ACCOUNT PAGES
+      ul.nav__list
+        li.nav__item: a.nav__link(href="#") Profile
+        li.nav__item: a.nav__link(href="#") Sign In
+        li.nav__item: a.nav__link(href="#") Sign Up
+    .sidebar__tip.sidebar-tip
+      .sidebar-tip__icon
+        img(src="./imgs/question-symbol.svg", alt="")
+      .sidebar-tip__text
+        span Need help?
+        span Please check our docs
+      .sidebar-tip__btn.btn DOCUMENTATION
