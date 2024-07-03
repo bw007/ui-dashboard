@@ -1,0 +1,12 @@
+@mixin flex($x: flex-start, $y: flex-start, $fd: row, $g: 0) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+  flex-direction: $fd;
+  gap: $g;
+}
+@mixin font($size: 1rem, $line: 1.15, $weight: normal) {
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+}
