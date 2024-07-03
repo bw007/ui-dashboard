@@ -1,3 +1,83 @@
+@font-face {
+    font-family: "DM Sans";
+    src: url("../fonts/DMSans-Light.woff2") format("woff2"), url("../fonts/DMSans-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+  src: url("../fonts/DMSans-ExtraLight.woff2") format("woff2"), url("../fonts/DMSans-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+  src: url("../fonts/DMSans-ExtraBold.woff2") format("woff2"), url("../fonts/DMSans-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+  src: url("../fonts/DMSans-Medium.woff2") format("woff2"), url("../fonts/DMSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+  src: url("../fonts/DMSans-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/DMSans-ExtraBoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+  src: url("../fonts/DMSans-Regular.woff2") format("woff2"), url("../fonts/DMSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+  src: url("../fonts/DMSans-Thin.woff2") format("woff2"), url("../fonts/DMSans-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+  src: url("../fonts/DMSans-Black.woff2") format("woff2"), url("../fonts/DMSans-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+  src: url("../fonts/DMSans-SemiBold.woff2") format("woff2"), url("../fonts/DMSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+  src: url("../fonts/DMSans-Bold.woff2") format("woff2"), url("../fonts/DMSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -169,8 +249,8 @@ template {
 }
 
 body {
-    font-family: Helvetica, sans-serif;
     background-color: #f8f9fa;
+    font-family: "DM Sans", Arial, Helvetica, sans-serif;
 }
 
 button,
@@ -195,6 +275,42 @@ button:-moz-focusring,
     outline: 1px dotted ButtonText;
 }
 
+.btn {
+    cursor: pointer;
+    border-radius: 12px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 4px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    color: #2D3748;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn__plain {
+    background-color: transparent;
+}
+
+.btn__plain--teal {
+    border: 1px solid #4FD1C5;
+    color: #4FD1C5;
+}
+
+.btn__plain--teal:hover {
+    background-color: #4FD1C5;
+    color: #FFFFFF;
+}
+
 .sidebar {
     width: 270px;
     padding: 44px 25px 10px;
@@ -214,14 +330,26 @@ button:-moz-focusring,
     width: 100%;
 }
 
-.nav {
+.sidebar__decor {
     width: 100%;
 }
 
+.sidebar__nav {
+    width: 100%;
+}
+
+.sidebar__tip {
+    width: 100%;
+    background-color: #4FD1C5;
+    border-radius: 15px;
+    padding: 16px;
+    margin-top: 32px;
+}
+
 .nav__heading {
-    font-size: 12px;
+    font-size: 0.875rem;
     line-height: 1.5;
-    font-weight: bold;
+    font-weight: 700;
     padding: 15px;
 }
 
@@ -237,20 +365,47 @@ button:-moz-focusring,
     width: 100%;
 }
 
+.nav__link {
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 12px 15px;
+}
+
 .link {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     gap: 13px;
-    text-decoration: none;
-    border-radius: 15px;
-    padding: 12px 15px;
+    transition: 150ms linear;
+}
+
+.link__icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+}
+
+.link__text {
+    color: #A0AEC0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 500;
 }
 
 .link__active {
-    background-color: #fff;
+    background-color: #FFFFFF !important;
     box-shadow: 0 3.5px 5.5px 0 rgba(0, 0, 0, 0.02);
+}
+
+.link__active .link__text {
+    color: #2D3748 !important;
 }
 
 .link__active .link__icon {
@@ -265,30 +420,15 @@ button:-moz-focusring,
     color: #2D3748;
 }
 
-.link__icon {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 0;
-    border-radius: 12px;
-    background-color: #fff;
+.link:hover {
+    background-color: #EDF2F7;
 }
 
-.link__text {
-    color: #A0AEC0;
-    font-size: 12px;
-    line-height: 1.5;
-    font-weight: bold;
+.link:hover .link__text {
+    color: #718096;
 }
 
 .sidebar-tip {
-    width: 100%;
-    background-color: #4FD1C5;
-    border-radius: 15px;
-    padding: 16px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -305,17 +445,17 @@ button:-moz-focusring,
     border-radius: 12px;
     width: 35px;
     height: 35px;
-    background-color: #fff;
+    background-color: #FFFFFF;
 }
 
 .sidebar-tip__text {
-    color: #fff;
+    color: #FFFFFF;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     gap: 0;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.5;
     font-weight: normal;
 }
@@ -327,18 +467,5 @@ button:-moz-focusring,
 }
 
 .sidebar-tip__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 0;
-    font-size: 10px;
-    line-height: 1.5;
-    font-weight: bold;
-    background-color: #fff;
-    cursor: pointer;
-    color: #2D3748;
-    border-radius: 12px;
-    height: 35px;
-    width: 100%;
+    color: #2d3748;
 }
