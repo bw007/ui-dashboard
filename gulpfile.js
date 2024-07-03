@@ -21,18 +21,21 @@ const path = {
     scss: "src/scss/style.scss",
     ts: "src/ts/**/*.ts",
     img: "src/imgs/**/*.{jpg,png,svg,gif,ico}",
+    font: "src/fonts/**/*"
   },
   watch: {
     pug: "src/pug/**/*.pug",
     scss: "src/scss/**/*.scss",
     ts: "src/ts/**/*.ts",
     img: "src/imgs/**/*.{jpg,png,svg,gif,ico}",
+    font: "src/fonts/**/*",
   },
   build: {
     html: "dist/",
     css: "dist/css/",
     js: "dist/js/",
     img: "dist/imgs/",
+    font: "dist/fonts/",
   },
 };
 
@@ -76,11 +79,18 @@ async function images() {
     .pipe(dest(path.build.img));
 }
 
+async function fonts() {
+  return src(path.src.font)
+    .pipe(imagemin())
+    .pipe(dest(path.build.font));
+}
+
 async function watchFiles() {
   watch([path.watch.scss], scssToCss);
   watch([path.watch.ts], tsCompile);
   watch([path.watch.pug], pugToHTML);
   watch([path.watch.img], images);
+  watch([path.watch.font], fonts);
 }
 
 function browsersync() {
@@ -97,13 +107,14 @@ function cleanDist() {
     .pipe(clean());
 }
 
-const build = series(cleanDist, scssToCss, pugToHTML, images, tsCompile);
+const build = series(cleanDist, scssToCss, pugToHTML, images, fonts, tsCompile);
 const watching = series(build, watchFiles, browsersync);
 
 exports.scssToCss = scssToCss;
 exports.tsCompile = tsCompile;
 exports.pugToHTML = pugToHTML;
 exports.images = images;
+exports.fonts = fonts;
 exports.cleanDist = cleanDist;
 exports.watching = watching;
 exports.default = watching;
