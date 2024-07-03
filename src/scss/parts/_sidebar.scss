@@ -2,96 +2,94 @@
   width: 270px;
   padding: 44px 25px 10px;
   @include flex($fd: column, $g: 25px);
-
-  &__logo {}
-
   &__inner {
     @include flex($fd: column, $g: 20px);
     width: 100%;
   }
-
-  &__decor {}
-
-  &__nav {}
-}
-
-.logo {
-  &__img {}
+  &__decor {
+    width: 100%;
+  }
+  &__nav {
+    width: 100%;
+  }
+  &__tip {
+    width: 100%;
+    background-color: $color-teal-300;
+    border-radius: 15px;
+    padding: 16px;
+    margin-top: 32px;
+  }
 }
 
 .nav {
-  width: 100%;
-
   &__heading {
-    @include font(12px, 1.5, bold);
+    @include font($font-sm, $line-height-base, $font-bold);
     padding: 15px;
   }
-
   &__list {
     @include flex($fd: column);
   }
-
   &__item {
     width: 100%;
   }
-
-  &__link {}
+  &__link {
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 12px 15px;
+  }
 }
 
 .link {
-  &__active {
-    background-color: #fff;
-    box-shadow: 0 3.5px 5.5px 0 rgba(0, 0, 0, 0.02);
-
-    .link__icon {
-      background-color: #4FD1C5;
-
-      img {
-        filter: brightness(5);
-      }
-    }
-
-    .link__text {
-      color: #2D3748;
-    }
-  }
-
   @include flex($y: center, $g: 13px);
-  text-decoration: none;
-  border-radius: 15px;
-  padding: 12px 15px;
-
+  transition: $transition-duration-fast linear;
   &__icon {
     width: 30px;
     height: 30px;
     @include flex(center, center);
     border-radius: 12px;
-    background-color: #fff;
+    background-color: $color-white;
   }
-
   &__text {
-    color: #A0AEC0;
-    @include font(12px, 1.5, bold)
+    color: $color-gray-400;
+    @include font($font-sm, $line-height-base, $font-medium);
+  }
+  &__active {
+    background-color: $color-white !important;
+    box-shadow: 0 3.5px 5.5px 0 rgba(0, 0, 0, 0.02);
+    .link__text {
+      color: $color-gray-700 !important;
+    }
+    .link__icon {
+      background-color: $color-teal-300;
+      img {
+        filter: brightness(5);
+      }
+    }
+    .link__text {
+      color: $color-gray-700;
+    }
+  }
+  &:hover {
+    background-color: $color-gray-100;
+    .link__text {
+      color: $color-gray-500;
+    }
   }
 }
 
 .sidebar-tip {
-  width: 100%;
-  background-color: #4FD1C5;
-  border-radius: 15px;
-  padding: 16px;
   @include flex($fd: column, $g: 20px);
   &__icon {
     @include flex(center, center);
     border-radius: 12px;
     width: 35px;
     height: 35px;
-    background-color: #fff;
+    background-color: $color-white;
   }
   &__text {
-    color: #fff;
+    color: $color-white;
     @include flex($fd: column);
-    @include font(12px, 1.5);
+    @include font($font-xs, $line-height-base);
     span {
       &:first-child {
         @include font(14px, 1.4, bold);
@@ -99,13 +97,6 @@
     }
   }
   &__btn {
-    @include flex(center, center);
-    @include font(10px, 1.5, bold);
-    background-color: #fff;
-    cursor: pointer;
-    color: #2D3748;
-    border-radius: 12px;
-    height: 35px;
-    width: 100%;
+    color: #2d3748;
   }
 }
