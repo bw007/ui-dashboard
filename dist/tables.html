@@ -34,14 +34,15 @@
       <header class="header">
         <nav class="header__breadcrumb breadcrumb">
           <ul class="breadcrumb__list">
-            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Pages</a><span>/</span><a class="breadcrumb__link" href="#">Dashboard</a></li>
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Pages</a></li><span class="breadcrumb__separator">/</span>
+            <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--active" href="#">Dashboard</a></li>
           </ul>
-          <h4 class="breadcrumb__active">Dashboard</h4>
+          <h4 class="breadcrumb__current">Dashboard</h4>
         </nav>
         <div class="header__container">
           <div class="header__search"><img src="../imgs/search-icon.svg">
-            <input class="header__search-bar" type="text" placeholder="Type here...">
-          </div><a class="header__sign-in" href="#"><img src="../imgs/user-dark-icon.svg"><span>Sign In</span></a><a class="header__setting" href="#"><img src="../imgs/setting-dark-icon.svg"></a><a class="header__setting" href="#"><img src="../imgs/bell-icon.svg"></a>
+            <input type="text" placeholder="Type here...">
+          </div><a class="header__sign-in" href="#"><img src="../imgs/user-dark-icon.svg"><span>Sign In</span></a><a class="header__setting" href="#"><img src="../imgs/setting-dark-icon.svg"></a><a class="header__notification" href="#"><img src="../imgs/bell-icon.svg"></a>
         </div>
       </header>
     </main>
