@@ -1,0 +1,77 @@
+.header {
+  @include flex(space-between, center);
+  &__breadcrumb {
+    @include flex($fd: column);
+  }
+  &__container {
+    @include flex(space-between, center, $g: 18px);
+    img {
+      width: 14px;
+    }
+  }
+  &__search {
+    @include flex($y: center, $g: 10px);
+    background-color: $color-white;
+    border-radius: 12px;
+    padding: 10px 14px;
+    img {
+      opacity: 0.4;
+    }
+    input {
+      border: none;
+      outline: none;
+      @include font($font-sm, 1.5, 400);
+      color: $color-gray-700;
+      &::placeholder {
+        color: $color-gray-400;
+      }
+    }
+  }
+  &__sign-in {
+    @include flex($y: center, $g: 4px);
+    span {
+      @include font($font-sm, 1.5, bold);
+      color: $color-gray-500;
+    }
+  }
+  &__setting {
+    @include flex($y: center);
+  }
+  &__notification {
+    @include flex($y: center);
+  }
+  &__sign-in, &__setting, &__notification {
+    transition-property: $transition-property-common;
+    transition-duration: $transition-duration-normal;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.breadcrumb {
+  @include flex($fd: column, $g: 5px);
+  &__list {
+    @include flex($g: 7px);
+  }
+  &__item {
+  }
+  &__link,
+  &__separator {
+    @include font($font-sm, 1.5, 500);
+    color: $color-gray-400;
+  }
+  &__link--active,
+  &__separator {
+    color: $color-gray-700;
+  }
+  &__link {
+    text-decoration: none;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  &__current {
+    @include font($font-lg, 140%, bold);
+  }
+}

@@ -1,0 +1,47 @@
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 12px;
+  width: 100%;
+  height: 35px;
+  @include flex(center, center, $g: 4px);
+  text-transform: uppercase;
+  @include font($font-xs, 1.4, bold);
+  background-color: $color-white;
+  color: $color-gray-700;
+  &:hover {
+    opacity: 0.9;
+  }
+  &__plain {
+    background-color: transparent;
+    &--teal {
+      border: 1px solid $color-teal-300;
+      color: $color-teal-300;
+      &:hover {
+        background-color: $color-teal-300;
+        color: $color-white;
+      }
+    }
+  }
+}

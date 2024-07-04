@@ -1,0 +1,13 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+}
+.page {
+  @include flex();
+  height: 100vh;
+}
+.main {
+  flex-grow: 1;
+  padding: 22px;
+  height: 100%;
+}

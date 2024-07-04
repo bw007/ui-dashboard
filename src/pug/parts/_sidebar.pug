@@ -1,0 +1,44 @@
+aside.sidebar 
+  a.sidebar__logo.logo(href="index.html")
+    img.logo__img(src="./imgs/logo.png" alt="Dashboard logo")
+  .sidebar__inner
+    img.sidebar__decor(src="./imgs/line-shape.svg" alt="")
+    nav.sidebar__nav.nav
+      ul.nav__list
+        li.nav__item: a.nav__link.link.link__active(href="index.html")
+          span.link__icon
+            img(src="./imgs/home-icon.svg")
+          span.link__text Dashboard
+        li.nav__item: a.nav__link.link(href="#")
+          span.link__icon
+            img(src="./imgs/chart-icon.svg")
+          span.link__text Tables
+        li.nav__item: a.nav__link.link(href="#")
+          span.link__icon
+            img(src="./imgs/billing-icon.svg")
+          span.link__text Billing
+        li.nav__item: a.nav__link.link(href="#")
+          span.link__icon
+            img(src="./imgs/setting-icon.svg")
+          span.link__text RTL
+      h4.nav__heading.nav__heading ACCOUNT PAGES
+      ul.nav__list
+        li.nav__item: a.nav__link.link(href="#")
+          span.link__icon
+            img(src="./imgs/user-icon.svg")
+          span.link__text Profile
+        li.nav__item: a.nav__link.link(href="#")
+          span.link__icon
+            img(src="./imgs/file-icon.svg")
+          span.link__text Sign In
+        li.nav__item: a.nav__link.link(href="#")
+          span.link__icon
+            img(src="./imgs/rocket-icon.svg")
+          span.link__text Sign Up
+  .sidebar__tip.sidebar-tip
+    .sidebar-tip__icon
+      img(src="./imgs/question-symbol.svg" alt="")
+    .sidebar-tip__text
+      span Need help?
+      span Please check our docs
+    .sidebar-tip__btn.btn DOCUMENTATION
