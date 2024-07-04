@@ -3,17 +3,18 @@ header.header
     ul.breadcrumb__list
       li.breadcrumb__item
         a.breadcrumb__link(href="#") Pages
-        span /
-        a.breadcrumb__link(href="#") Dashboard
-    h4.breadcrumb__active Dashboard
+      span.breadcrumb__separator /
+      li.breadcrumb__item
+        a.breadcrumb__link.breadcrumb__link--active(href="#") Dashboard
+    h4.breadcrumb__current Dashboard
   .header__container
     .header__search
       img(src="../imgs/search-icon.svg")
-      input.header__search-bar(type="text" placeholder="Type here...")
+      input(type="text" placeholder="Type here...")
     a.header__sign-in(href="#")
       img(src="../imgs/user-dark-icon.svg")
       span Sign In
     a.header__setting(href="#")
       img(src="../imgs/setting-dark-icon.svg")
-    a.header__setting(href="#")
+    a.header__notification(href="#")
       img(src="../imgs/bell-icon.svg")
