@@ -12,7 +12,7 @@
         <nav class="sidebar__nav nav">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link link link__active" href="index.html"><span class="link__icon"><img src="./imgs/home-icon.svg"></span><span class="link__text">Dashboard</span></a></li>
-            <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/chart-icon.svg"></span><span class="link__text">Tables</span></a></li>
+            <li class="nav__item"><a class="nav__link link" href="tables.html"><span class="link__icon"><img src="./imgs/chart-icon.svg"></span><span class="link__text">Tables</span></a></li>
             <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/billing-icon.svg"></span><span class="link__text">Billing</span></a></li>
             <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/setting-icon.svg"></span><span class="link__text">RTL</span></a></li>
           </ul>
@@ -45,6 +45,44 @@
           </div><a class="header__sign-in" href="#"><img src="../imgs/user-dark-icon.svg"><span>Sign In</span></a><a class="header__setting" href="#"><img src="../imgs/setting-dark-icon.svg"></a><a class="header__notification" href="#"><img src="../imgs/bell-icon.svg"></a>
         </div>
       </header>
+      <section class="tables">
+        <div class="tables__holder">
+          <h4 class="tables__title">Authors Table</h4>
+          <table class="tables__container table">
+            <thead class="table__head">
+              <tr class="table__row">
+                <th class="table__h-cell">author</th>
+                <th class="table__h-cell">function</th>
+                <th class="table__h-cell">status</th>
+                <th class="table__h-cell">employed</th>
+              </tr>
+            </thead>
+            <tbody class="table__body">
+              <tr class="table__row">
+                <td class="table__cell table-cell"><img src="./imgs/table-user.png">
+                  <div class="table-cell__inner">
+                    <h6>Laurent Michael</h6><span>laurent@simmmple.com</span>
+                  </div>
+                </td>
+                <td class="table__cell table-cell">
+                  <div class="table-cell__inner">
+                    <h6>Manager</h6><span>Organization</span>
+                  </div>
+                </td>
+                <td class="table__cell table-cell">
+                  <button class="btn table-cell__status">Online</button>
+                </td>
+                <td class="table__cell table-cell">
+                  <h6>14/06/21</h6>
+                </td>
+                <td class="table__cell table-cell">
+                  <button class="table-cell__edit"></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
   </body>
 </html>
