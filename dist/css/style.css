@@ -644,12 +644,18 @@ button:-moz-focusring,
 
 .tables {
     margin-top: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .tables__holder {
     background-color: #FFFFFF;
     border-radius: 15px;
     padding: 28px 20px;
+    width: 100%;
 }
 
 .tables__title {
@@ -662,6 +668,24 @@ button:-moz-focusring,
 
 .tables__container {
     width: 100%;
+}
+
+.tables__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 0.875rem;
+    line-height: 140%;
+    font-weight: 400;
+    color: #A0AEC0;
+    margin-bottom: 24px;
+}
+
+.tables__info b {
+    margin-right: 4px;
+    color: #718096;
 }
 
 .table__h-row {
@@ -695,6 +719,20 @@ button:-moz-focusring,
     gap: 14px;
 }
 
+.table-cell h6 {
+    font-size: 0.875rem;
+    line-height: 140%;
+    font-weight: bold;
+    color: #2D3748;
+}
+
+.table-cell span {
+    font-size: 0.875rem;
+    line-height: 140%;
+    font-weight: 400;
+    color: #718096;
+}
+
 .table-cell__avatar {
     width: 40px;
     height: 40px;
@@ -715,20 +753,6 @@ button:-moz-focusring,
     align-items: flex-start;
     flex-direction: column;
     gap: 0;
-}
-
-.table-cell__inner h6 {
-    font-size: 0.875rem;
-    line-height: 140%;
-    font-weight: bold;
-    color: #2D3748;
-}
-
-.table-cell__inner span {
-    font-size: 0.875rem;
-    line-height: 140%;
-    font-weight: 400;
-    color: #718096;
 }
 
 .table-cell__status, .table-cell__edit {
@@ -753,6 +777,40 @@ button:-moz-focusring,
     background-color: #A0AEC0;
 }
 
+.table-cell__edit {
+    color: #4FD1C5;
+}
+
 .table-cell__edit:hover {
-    opacity: 0.7;
+    color: #285E61;
+}
+
+.table-cell__edit:hover img {
+    opacity: 0.6;
+}
+
+.table-cell__progress {
+    font-size: 0.875rem;
+    line-height: 140%;
+    font-weight: bold;
+    color: #4FD1C5;
+}
+
+.table-cell__progress-bar {
+    width: 125px;
+    height: 3px;
+    border-radius: 2px;
+    position: relative;
+    background-color: #E2E8F0;
+}
+
+.table-cell__progress-bar::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 62px;
+    background-color: #4FD1C5;
 }
