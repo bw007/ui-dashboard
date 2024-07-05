@@ -8,15 +8,53 @@ block content
         h4.tables__title Authors Table
         table.tables__container.table
           thead.table__head
-            tr.table__row
+            tr.table__row.table__h-row
               th.table__h-cell author
               th.table__h-cell function
               th.table__h-cell status
               th.table__h-cell employed
+              th
           tbody.table__body
             tr.table__row
               td.table__cell.table-cell
-                img(src="./imgs/table-user.png")
+                .table-cell__avatar
+                  img(src="./imgs/table-user.png")
+                .table-cell__inner
+                  h6 Laurent Michael
+                  span laurent@simmmple.com
+              td.table__cell.table-cell
+                .table-cell__inner
+                  h6 Programmer
+                  span Developer
+              td.table__cell.table-cell
+                button.table-cell__status Online
+              td.table__cell.table-cell
+                .table-cell__inner
+                  h6 14/06/21
+              td.table__cell.table-cell
+                button.table-cell__edit Edit
+            tr.table__row
+              td.table__cell.table-cell
+                .table-cell__avatar
+                  img(src="./imgs/table-user-2.png")
+                .table-cell__inner
+                  h6 Alexa Liras
+                  span alexa@simmmple.com
+              td.table__cell.table-cell
+                .table-cell__inner
+                  h6 Manager
+                  span Organization
+              td.table__cell.table-cell
+                button.table-cell__status Online
+              td.table__cell.table-cell
+                .table-cell__inner
+                  h6 14/06/21
+              td.table__cell.table-cell
+                button.table-cell__edit Edit
+            tr.table__row
+              td.table__cell.table-cell
+                .table-cell__avatar
+                  img(src="./imgs/table-user-3.png")
                 .table-cell__inner
                   h6 Laurent Michael
                   span laurent@simmmple.com
@@ -25,8 +63,63 @@ block content
                   h6 Manager
                   span Organization
               td.table__cell.table-cell
-                button.btn.table-cell__status Online
+                button.table-cell__status Online
               td.table__cell.table-cell
-                h6 14/06/21
+                .table-cell__inner
+                  h6 14/06/21
               td.table__cell.table-cell
-                button.table-cell__edit
+                button.table-cell__edit Edit
+            tr.table__row
+              td.table__cell.table-cell
+                .table-cell__avatar
+                  img(src="./imgs/table-user.png")
+                .table-cell__inner
+                  h6 Laurent Michael
+                  span laurent@simmmple.com
+              td.table__cell.table-cell
+                .table-cell__inner
+                  h6 Manager
+                  span Organization
+              td.table__cell.table-cell
+                button.table-cell__status Online
+              td.table__cell.table-cell
+                .table-cell__inner
+                  h6 14/06/21
+              td.table__cell.table-cell
+                button.table-cell__edit Edit
+            tr.table__row
+              td.table__cell.table-cell
+                .table-cell__avatar
+                  img(src="./imgs/table-user-2.png")
+                .table-cell__inner
+                  h6 Laurent Michael
+                  span laurent@simmmple.com
+              td.table__cell.table-cell
+                .table-cell__inner
+                  h6 Manager
+                  span Organization
+              td.table__cell.table-cell
+                button.table-cell__status Online
+              td.table__cell.table-cell
+                .table-cell__inner
+                  h6 14/06/21
+              td.table__cell.table-cell
+                button.table-cell__edit Edit
+            tr.table__row
+              td.table__cell.table-cell
+                .table-cell__avatar
+                  img(src="./imgs/table-user-3.png")
+                .table-cell__inner
+                  h6 Laurent Michael
+                  span laurent@simmmple.com
+              td.table__cell.table-cell
+                .table-cell__inner
+                  h6 Manager
+                  span Organization
+              td.table__cell.table-cell
+                button.table-cell__status.btn__success Online
+              td.table__cell.table-cell
+                .table-cell__inner
+                  h6 14/06/21
+              td.table__cell.table-cell
+                button.table-cell__edit Edit
