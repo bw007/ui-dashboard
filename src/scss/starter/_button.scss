@@ -1,3 +1,6 @@
+button {
+  cursor: pointer;
+}
 button,
 [type="button"],
 [type="reset"],
@@ -42,6 +45,14 @@ button:-moz-focusring,
         background-color: $color-teal-300;
         color: $color-white;
       }
+    }
+  }
+  &__success {
+    color: $color-white;
+    background-color: $color-green-400 !important;
+    &:hover {
+      background-color: $color-green-500 !important;
+      color: $color-white;
     }
   }
 }
