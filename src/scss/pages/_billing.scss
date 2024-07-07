@@ -1,0 +1,73 @@
+.billing {
+
+  &__container {
+  }
+
+  &__c-card {
+    max-width: 460px;
+    background-image: url("../imgs/credit-card.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &__salary {}
+
+  &__payment {}
+
+  &__invoices {}
+
+  &__c-card, &__salary, &__payment, &__invoices {
+    border-radius: 15px;
+  }
+}
+
+.c-card {
+  @include flex($fd: column);
+  color: $color-white;
+  padding: 22px;
+  &__header {
+    @include flex(space-between, center);
+    width: 100%;
+  }
+
+  &__name {
+    @include font($font-lg, 140%, bold);
+  }
+
+  &__number {
+    margin-top: 55px;
+    @include font($font-2xl, 140%, bold);
+  }
+
+  &__info {
+    @include flex($y: center, $g: 32px);
+    width: 100%;
+    p {
+      @include font($font-xs, 150%, 400)
+    }
+    h2 {
+      @include font($font-sm, 140%, bold);
+    }
+  }
+}
+
+.salary-data, .payment-data {
+  max-width: 240px;
+  border-radius: 15px;
+  background-color: $color-white;
+  &__icon {
+    width: 64px;
+    height: 64px;
+    @include flex(center, center);
+    border-radius: 12px;
+    background-color: $color-teal-400;
+  }
+  &__title {
+    @include font($font-lg, 140%, bold);
+  }
+  &__hint {}
+  &__decor {}
+  &__money {}
+}
