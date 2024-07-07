@@ -8,26 +8,28 @@
   </head>
   <body class="page">
     <aside class="sidebar"> <a class="sidebar__logo logo" href="index.html"><img class="logo__img" src="./imgs/logo.png" alt="Dashboard logo"></a>
-      <div class="sidebar__inner"><img class="sidebar__decor" src="./imgs/line-shape.svg" alt="">
-        <nav class="sidebar__nav nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link link link__active" href="index.html"><span class="link__icon"><img src="./imgs/home-icon.svg"></span><span class="link__text">Dashboard</span></a></li>
-            <li class="nav__item"><a class="nav__link link" href="tables.html"><span class="link__icon"><img src="./imgs/chart-icon.svg"></span><span class="link__text">Tables</span></a></li>
-            <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/billing-icon.svg"></span><span class="link__text">Billing</span></a></li>
-            <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/setting-icon.svg"></span><span class="link__text">RTL</span></a></li>
-          </ul>
-          <h4 class="nav__heading nav__heading">ACCOUNT PAGES</h4>
-          <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/user-icon.svg"></span><span class="link__text">Profile</span></a></li>
-            <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/file-icon.svg"></span><span class="link__text">Sign In</span></a></li>
-            <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/rocket-icon.svg"></span><span class="link__text">Sign Up</span></a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="sidebar__tip sidebar-tip">
-        <div class="sidebar-tip__icon"><img src="./imgs/question-symbol.svg" alt=""></div>
-        <div class="sidebar-tip__text"><span>Need help?</span><span>Please check our docs</span></div>
-        <div class="sidebar-tip__btn btn">DOCUMENTATION</div>
+      <div class="sidebar__scrollbar">
+        <div class="sidebar__inner"><img class="sidebar__decor" src="./imgs/line-shape.svg" alt="">
+          <nav class="sidebar__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link link link__active" href="index.html"><span class="link__icon"><img src="./imgs/home-icon.svg"></span><span class="link__text">Dashboard</span></a></li>
+              <li class="nav__item"><a class="nav__link link" href="tables.html"><span class="link__icon"><img src="./imgs/chart-icon.svg"></span><span class="link__text">Tables</span></a></li>
+              <li class="nav__item"><a class="nav__link link" href="billing.html"><span class="link__icon"><img src="./imgs/billing-icon.svg"></span><span class="link__text">Billing</span></a></li>
+              <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/setting-icon.svg"></span><span class="link__text">RTL</span></a></li>
+            </ul>
+            <h4 class="nav__heading nav__heading">ACCOUNT PAGES</h4>
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/user-icon.svg"></span><span class="link__text">Profile</span></a></li>
+              <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/file-icon.svg"></span><span class="link__text">Sign In</span></a></li>
+              <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/rocket-icon.svg"></span><span class="link__text">Sign Up</span></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sidebar__tip sidebar-tip">
+          <div class="sidebar-tip__icon"><img src="./imgs/question-symbol.svg" alt=""></div>
+          <div class="sidebar-tip__text"><span>Need help?</span><span>Please check our docs</span></div>
+          <div class="sidebar-tip__btn btn">DOCUMENTATION</div>
+        </div>
       </div>
     </aside>
     <main class="main">
@@ -45,291 +47,293 @@
           </div><a class="header__sign-in" href="#"><img src="../imgs/user-dark-icon.svg"><span>Sign In</span></a><a class="header__setting" href="#"><img src="../imgs/setting-dark-icon.svg"></a><a class="header__notification" href="#"><img src="../imgs/bell-icon.svg"></a>
         </div>
       </header>
-      <section class="tables">
-        <div class="tables__holder">
-          <h4 class="tables__title">Authors Table</h4>
-          <table class="tables__container table">
-            <thead class="table__head">
-              <tr class="table__row table__h-row">
-                <th class="table__h-cell">author</th>
-                <th class="table__h-cell">function</th>
-                <th class="table__h-cell">status</th>
-                <th class="table__h-cell">employed</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody class="table__body">
-              <tr class="table__row">
-                <td class="table__cell table-cell">
-                  <div class="table-cell__avatar"><img src="./imgs/table-user.png"></div>
-                  <div class="table-cell__inner">
-                    <h6>Laurent Michael</h6><span>laurent@simmmple.com</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>Programmer</h6><span>Developer</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__status btn__success">Online</button>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>14/06/21</h6>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__edit">Edit</button>
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table-cell">
-                  <div class="table-cell__avatar"><img src="./imgs/table-user-2.png"></div>
-                  <div class="table-cell__inner">
-                    <h6>Alexa Liras</h6><span>alexa@simmmple.com</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>Manager</h6><span>Organization</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__status btn__success">Online</button>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>14/06/21</h6>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__edit">Edit</button>
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table-cell">
-                  <div class="table-cell__avatar"><img src="./imgs/table-user-3.png"></div>
-                  <div class="table-cell__inner">
-                    <h6>Laurent Michael</h6><span>laurent@simmmple.com</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>Manager</h6><span>Organization</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__status btn__success">Online</button>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>14/06/21</h6>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__edit">Edit</button>
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table-cell">
-                  <div class="table-cell__avatar"><img src="./imgs/table-user.png"></div>
-                  <div class="table-cell__inner">
-                    <h6>Laurent Michael</h6><span>laurent@simmmple.com</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>Manager</h6><span>Organization</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__status">Online</button>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>14/06/21</h6>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__edit">Edit</button>
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table-cell">
-                  <div class="table-cell__avatar"><img src="./imgs/table-user-2.png"></div>
-                  <div class="table-cell__inner">
-                    <h6>Laurent Michael</h6><span>laurent@simmmple.com</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>Manager</h6><span>Organization</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__status">Online</button>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>14/06/21</h6>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__edit">Edit</button>
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table-cell">
-                  <div class="table-cell__avatar"><img src="./imgs/table-user-3.png"></div>
-                  <div class="table-cell__inner">
-                    <h6>Laurent Michael</h6><span>laurent@simmmple.com</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>Manager</h6><span>Organization</span>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__status btn__success">Online</button>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <h6>14/06/21</h6>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__edit">Edit</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="tables__holder">
-          <h4 class="tables__title">Projects</h4>
-          <div class="tables__info"><img src="./imgs/circle.svg">
-            <p><b>30 done</b><span>this month</span></p>
+      <div class="main__scrollbar">
+        <section class="tables">
+          <div class="tables__holder">
+            <h4 class="tables__title">Authors Table</h4>
+            <table class="tables__container table">
+              <thead class="table__head">
+                <tr class="table__row table__h-row">
+                  <th class="table__h-cell">author</th>
+                  <th class="table__h-cell">function</th>
+                  <th class="table__h-cell">status</th>
+                  <th class="table__h-cell">employed</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody class="table__body">
+                <tr class="table__row">
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__avatar"><img src="./imgs/table-user.png"></div>
+                    <div class="table-cell__inner">
+                      <h6>Laurent Michael</h6><span>laurent@simmmple.com</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>Programmer</h6><span>Developer</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__status btn__success">Online</button>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>14/06/21</h6>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__edit">Edit</button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__avatar"><img src="./imgs/table-user-2.png"></div>
+                    <div class="table-cell__inner">
+                      <h6>Alexa Liras</h6><span>alexa@simmmple.com</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>Manager</h6><span>Organization</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__status btn__success">Online</button>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>14/06/21</h6>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__edit">Edit</button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__avatar"><img src="./imgs/table-user-3.png"></div>
+                    <div class="table-cell__inner">
+                      <h6>Laurent Michael</h6><span>laurent@simmmple.com</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>Manager</h6><span>Organization</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__status btn__success">Online</button>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>14/06/21</h6>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__edit">Edit</button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__avatar"><img src="./imgs/table-user.png"></div>
+                    <div class="table-cell__inner">
+                      <h6>Laurent Michael</h6><span>laurent@simmmple.com</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>Manager</h6><span>Organization</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__status">Online</button>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>14/06/21</h6>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__edit">Edit</button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__avatar"><img src="./imgs/table-user-2.png"></div>
+                    <div class="table-cell__inner">
+                      <h6>Laurent Michael</h6><span>laurent@simmmple.com</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>Manager</h6><span>Organization</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__status">Online</button>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>14/06/21</h6>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__edit">Edit</button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__avatar"><img src="./imgs/table-user-3.png"></div>
+                    <div class="table-cell__inner">
+                      <h6>Laurent Michael</h6><span>laurent@simmmple.com</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>Manager</h6><span>Organization</span>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__status btn__success">Online</button>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <h6>14/06/21</h6>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__edit">Edit</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <table class="tables__container table">
-            <thead class="table__head">
-              <tr class="table__row table__h-row">
-                <th class="table__h-cell">companies</th>
-                <th class="table__h-cell">budget</th>
-                <th class="table__h-cell">status</th>
-                <th class="table__h-cell">completion</th>
-              </tr>
-            </thead>
-            <tbody class="table__body">
-              <tr class="table__row">
-                <td class="table__cell table-cell">
-                  <div class="table-cell__logo"><img src="./imgs/xd-logo.svg"></div>
-                  <h6>Chakra Soft UI Version</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <h6>$14,000</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <h6>Working</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <div class="table-cell__progress">60%</div>
-                    <div class="table-cell__progress-bar" data-progress="0"></div>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__edit"><img src="./imgs/point-icon.svg"></button>
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table-cell">
-                  <div class="table-cell__logo"><img src="./imgs/atlasian-logo.svg"></div>
-                  <h6>Add Progress Track</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <h6>$3,000</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <h6>Canceled</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <div class="table-cell__progress">10%</div>
-                    <div class="table-cell__progress-bar" data-progress="0"></div>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__edit"><img src="./imgs/point-icon.svg"></button>
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table-cell">
-                  <div class="table-cell__logo"><img src="./imgs/slack-logo.svg"></div>
-                  <h6>Fix Platform Errors</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <h6>No set</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <h6>Done</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <div class="table-cell__progress">100%</div>
-                    <div class="table-cell__progress-bar" data-progress="0"></div>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__edit"><img src="./imgs/point-icon.svg"></button>
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table-cell">
-                  <div class="table-cell__logo"><img src="./imgs/spotify-logo.svg"></div>
-                  <h6>Launch our Mobile App</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <h6>$32,000</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <h6>Done</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <div class="table-cell__progress">100%</div>
-                    <div class="table-cell__progress-bar" data-progress="0"></div>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__edit"><img src="./imgs/point-icon.svg"></button>
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table-cell">
-                  <div class="table-cell__logo"><img src="./imgs/jira-logo.svg"></div>
-                  <h6>Chakra Soft UI Version</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <h6>$400</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <h6>Working</h6>
-                </td>
-                <td class="table__cell table-cell">
-                  <div class="table-cell__inner">
-                    <div class="table-cell__progress">25%</div>
-                    <div class="table-cell__progress-bar" data-progress="0"></div>
-                  </div>
-                </td>
-                <td class="table__cell table-cell">
-                  <button class="table-cell__edit"><img src="./imgs/point-icon.svg"></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+          <div class="tables__holder">
+            <h4 class="tables__title">Projects</h4>
+            <div class="tables__info"><img src="./imgs/circle.svg">
+              <p><b>30 done</b><span>this month</span></p>
+            </div>
+            <table class="tables__container table">
+              <thead class="table__head">
+                <tr class="table__row table__h-row">
+                  <th class="table__h-cell">companies</th>
+                  <th class="table__h-cell">budget</th>
+                  <th class="table__h-cell">status</th>
+                  <th class="table__h-cell">completion</th>
+                </tr>
+              </thead>
+              <tbody class="table__body">
+                <tr class="table__row">
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__logo"><img src="./imgs/xd-logo.svg"></div>
+                    <h6>Chakra Soft UI Version</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <h6>$14,000</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <h6>Working</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <div class="table-cell__progress">60%</div>
+                      <div class="table-cell__progress-bar" data-progress="0"></div>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__edit"><img src="./imgs/point-icon.svg"></button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__logo"><img src="./imgs/atlasian-logo.svg"></div>
+                    <h6>Add Progress Track</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <h6>$3,000</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <h6>Canceled</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <div class="table-cell__progress">10%</div>
+                      <div class="table-cell__progress-bar" data-progress="0"></div>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__edit"><img src="./imgs/point-icon.svg"></button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__logo"><img src="./imgs/slack-logo.svg"></div>
+                    <h6>Fix Platform Errors</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <h6>No set</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <h6>Done</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <div class="table-cell__progress">100%</div>
+                      <div class="table-cell__progress-bar" data-progress="0"></div>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__edit"><img src="./imgs/point-icon.svg"></button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__logo"><img src="./imgs/spotify-logo.svg"></div>
+                    <h6>Launch our Mobile App</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <h6>$32,000</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <h6>Done</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <div class="table-cell__progress">100%</div>
+                      <div class="table-cell__progress-bar" data-progress="0"></div>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__edit"><img src="./imgs/point-icon.svg"></button>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__logo"><img src="./imgs/jira-logo.svg"></div>
+                    <h6>Chakra Soft UI Version</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <h6>$400</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <h6>Working</h6>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <div class="table-cell__inner">
+                      <div class="table-cell__progress">25%</div>
+                      <div class="table-cell__progress-bar" data-progress="0"></div>
+                    </div>
+                  </td>
+                  <td class="table__cell table-cell">
+                    <button class="table-cell__edit"><img src="./imgs/point-icon.svg"></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
     </main>
   </body>
 </html>

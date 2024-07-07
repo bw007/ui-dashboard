@@ -78,6 +78,21 @@
   font-display: swap;
 }
 
+.sidebar__scrollbar, .main__scrollbar {
+    overflow-y: scroll;
+}
+
+.sidebar__scrollbar::-webkit-scrollbar, .main__scrollbar::-webkit-scrollbar {
+    width: 3px;
+    background-color: transparent;
+    display: none;
+}
+
+.sidebar__scrollbar::-webkit-scrollbar-thumb, .main__scrollbar::-webkit-scrollbar-thumb {
+    background: #EDF2F7;
+    border-radius: 2px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -266,8 +281,14 @@ body {
 
 .main {
     flex-grow: 1;
+    max-width: calc(100vw - 270px);
     padding: 22px;
     height: 100%;
+}
+
+.main__scrollbar {
+    height: calc(100% - 53px);
+    margin-top: 24px;
 }
 
 button {
@@ -312,6 +333,8 @@ button:-moz-focusring,
     font-weight: bold;
     background-color: #FFFFFF;
     color: #2D3748;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 150ms;
 }
 
 .btn:hover {
@@ -484,13 +507,19 @@ button:-moz-focusring,
 }
 
 .sidebar {
-    width: 270px;
-    padding: 44px 25px 10px;
+    min-width: 270px;
+    box-sizing: border-box;
+    height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     gap: 25px;
+    padding: 44px 25px 10px;
+}
+
+.sidebar__scrollbar {
+    width: 100%;
 }
 
 .sidebar__inner {
@@ -643,18 +672,18 @@ button:-moz-focusring,
 }
 
 .tables {
-    margin-top: 24px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     gap: 24px;
+    width: 100%;
 }
 
 .tables__holder {
     background-color: #FFFFFF;
     border-radius: 15px;
-    padding: 28px 20px;
+    padding: 28px 20px 20px;
     width: 100%;
 }
 
@@ -717,6 +746,14 @@ button:-moz-focusring,
     align-items: center;
     flex-direction: row;
     gap: 14px;
+}
+
+.table-cell__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
 }
 
 .table-cell h6 {
@@ -813,4 +850,94 @@ button:-moz-focusring,
     left: 0;
     width: 62px;
     background-color: #4FD1C5;
+}
+
+.billing__c-card {
+    max-width: 460px;
+    background-image: url("../imgs/credit-card.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.billing__c-card, .billing__salary, .billing__payment, .billing__invoices {
+    border-radius: 15px;
+}
+
+.c-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+    color: #FFFFFF;
+    padding: 22px;
+}
+
+.c-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+    width: 100%;
+}
+
+.c-card__name {
+    font-size: 1.125rem;
+    line-height: 140%;
+    font-weight: bold;
+}
+
+.c-card__number {
+    margin-top: 55px;
+    font-size: 1.5rem;
+    line-height: 140%;
+    font-weight: bold;
+}
+
+.c-card__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+}
+
+.c-card__info p {
+    font-size: 0.75rem;
+    line-height: 150%;
+    font-weight: 400;
+}
+
+.c-card__info h2 {
+    font-size: 0.875rem;
+    line-height: 140%;
+    font-weight: bold;
+}
+
+.salary-data, .payment-data {
+    max-width: 240px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+
+.salary-data__icon, .payment-data__icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+    border-radius: 12px;
+    background-color: #38B2AC;
+}
+
+.salary-data__title, .payment-data__title {
+    font-size: 1.125rem;
+    line-height: 140%;
+    font-weight: bold;
 }

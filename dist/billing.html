@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="page">
+    <aside class="sidebar"> <a class="sidebar__logo logo" href="index.html"><img class="logo__img" src="./imgs/logo.png" alt="Dashboard logo"></a>
+      <div class="sidebar__scrollbar">
+        <div class="sidebar__inner"><img class="sidebar__decor" src="./imgs/line-shape.svg" alt="">
+          <nav class="sidebar__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link link link__active" href="index.html"><span class="link__icon"><img src="./imgs/home-icon.svg"></span><span class="link__text">Dashboard</span></a></li>
+              <li class="nav__item"><a class="nav__link link" href="tables.html"><span class="link__icon"><img src="./imgs/chart-icon.svg"></span><span class="link__text">Tables</span></a></li>
+              <li class="nav__item"><a class="nav__link link" href="billing.html"><span class="link__icon"><img src="./imgs/billing-icon.svg"></span><span class="link__text">Billing</span></a></li>
+              <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/setting-icon.svg"></span><span class="link__text">RTL</span></a></li>
+            </ul>
+            <h4 class="nav__heading nav__heading">ACCOUNT PAGES</h4>
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/user-icon.svg"></span><span class="link__text">Profile</span></a></li>
+              <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/file-icon.svg"></span><span class="link__text">Sign In</span></a></li>
+              <li class="nav__item"><a class="nav__link link" href="#"><span class="link__icon"><img src="./imgs/rocket-icon.svg"></span><span class="link__text">Sign Up</span></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sidebar__tip sidebar-tip">
+          <div class="sidebar-tip__icon"><img src="./imgs/question-symbol.svg" alt=""></div>
+          <div class="sidebar-tip__text"><span>Need help?</span><span>Please check our docs</span></div>
+          <div class="sidebar-tip__btn btn">DOCUMENTATION</div>
+        </div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <nav class="header__breadcrumb breadcrumb">
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Pages</a></li><span class="breadcrumb__separator">/</span>
+            <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link--active" href="#">Dashboard</a></li>
+          </ul>
+          <h4 class="breadcrumb__current">Dashboard</h4>
+        </nav>
+        <div class="header__container">
+          <div class="header__search"><img src="../imgs/search-icon.svg">
+            <input type="text" placeholder="Type here...">
+          </div><a class="header__sign-in" href="#"><img src="../imgs/user-dark-icon.svg"><span>Sign In</span></a><a class="header__setting" href="#"><img src="../imgs/setting-dark-icon.svg"></a><a class="header__notification" href="#"><img src="../imgs/bell-icon.svg"></a>
+        </div>
+      </header>
+      <div class="main__scrollbar">
+        <section class="billing">
+          <div class="billing__container">
+            <div class="billing__c-card c-card">
+              <div class="c-card__header">
+                <h3 class="c-card__name">Purity UI</h3><img class="c-card__logo" src="./imgs/ms-card-circle.svg" alt="">
+              </div>
+              <h1 class="c-card__number">7812 2139 0823 XXXX</h1>
+              <div class="c-card__info">
+                <div class="c-card__expiration">
+                  <p>VALID THRU</p>
+                  <h2>05/24</h2>
+                </div>
+                <div class="c-card__cvv">
+                  <p>CVV</p>
+                  <h2>09X</h2>
+                </div>
+              </div>
+            </div>
+            <div class="billing__salary salary-data">
+              <div class="salary-data__icon"><img src="./imgs/wallet-icon.svg" alt=""></div>
+              <h4 class="salary-data__title">Salary</h4>
+              <div class="salary-data__hint">Belong Interactive</div><img class="salary-data__decor" src="./imgs/card-line-decor.svg" alt="">
+              <div class="salary-data__money">+$2000</div>
+            </div>
+            <div class="billing__payment payment-data">
+              <div class="payment-data__icon"><img src="./imgs/paypal-logo.svg" alt=""></div>
+              <h4 class="payment-data__title">Paypal</h4>
+              <div class="payment-data__hint">Freelance Payment</div><img src="./imgs/card-line-decor.svg" alt="">
+              <div class="payment-data__money">$455.00</div>
+            </div>
+            <div class="billing__invoices invoices-data">
+              <div class="invoices-data__header">
+                <h4 class="invoices-data__title">Invoices</h4>
+                <button class="btn btn__plain btn__plain--teal">VIEW ALL</button>
+              </div>
+              <ul class="invoices-data__list">
+                <li class="invoices-data__item">
+                  <div class="invoices-data__info">
+                    <h5>March, 01, 2020</h5><span>#MS-415646</span>
+                  </div>
+                  <div class="invoices-data__docs"><span>$180</span>
+                    <div class="invoices-data__receipt"><img src="./imgs/file-dark-icon.svg" alt=""><b>PDF</b></div>
+                  </div>
+                </li>
+                <li class="invoices-data__item">
+                  <div class="invoices-data__info">
+                    <h5>February, 10, 2021</h5><span>#MS-415621</span>
+                  </div>
+                  <div class="invoices-data__docs"><span>$220</span>
+                    <div class="invoices-data__receipt"><img src="./imgs/file-dark-icon.svg" alt=""><b>PDF</b></div>
+                  </div>
+                </li>
+                <li class="invoices-data__item">
+                  <div class="invoices-data__info">
+                    <h5>March, 07, 2024</h5><span>#MS-415216</span>
+                  </div>
+                  <div class="invoices-data__docs"><span>$420</span>
+                    <div class="invoices-data__receipt"><img src="./imgs/file-dark-icon.svg" alt=""><b>PDF</b></div>
+                  </div>
+                </li>
+                <li class="invoices-data__item">
+                  <div class="invoices-data__info">
+                    <h5>March, 01, 2020</h5><span>#MS-415646</span>
+                  </div>
+                  <div class="invoices-data__docs"><span>$180</span>
+                    <div class="invoices-data__receipt"><img src="./imgs/file-dark-icon.svg" alt=""><b>PDF</b></div>
+                  </div>
+                </li>
+                <li class="invoices-data__item">
+                  <div class="invoices-data__info">
+                    <h5>March, 01, 2020</h5><span>#MS-415646</span>
+                  </div>
+                  <div class="invoices-data__docs"><span>$180</span>
+                    <div class="invoices-data__receipt"><img src="./imgs/file-dark-icon.svg" alt=""><b>PDF</b></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
