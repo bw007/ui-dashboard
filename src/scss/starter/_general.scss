@@ -2,12 +2,20 @@ body {
   background-color: #f8f9fa;
   font-family: "DM Sans", Arial, Helvetica, sans-serif;
 }
+
 .page {
   @include flex();
   height: 100vh;
 }
+
 .main {
   flex-grow: 1;
+  max-width: calc(100vw - 270px);
   padding: 22px;
   height: 100%;
+  &__scrollbar {
+    height: calc(100% - 53px);
+    margin-top: 24px;
+    @extend %scrollbar;
+  }
 }
