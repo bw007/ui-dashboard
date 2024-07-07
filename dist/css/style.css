@@ -861,6 +861,12 @@ button:-moz-focusring,
     overflow: hidden;
 }
 
+.billing__salary, .billing__payment, .billing__invoices {
+    background-color: #FFFFFF;
+    color: #2D3748;
+    padding: 30px;
+}
+
 .billing__c-card, .billing__salary, .billing__payment, .billing__invoices {
     border-radius: 15px;
 }
@@ -918,13 +924,18 @@ button:-moz-focusring,
     font-weight: bold;
 }
 
-.salary-data, .payment-data {
+.salary-data,
+.payment-data {
     max-width: 240px;
-    border-radius: 15px;
-    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.salary-data__icon, .payment-data__icon {
+.salary-data__icon,
+.payment-data__icon {
     width: 64px;
     height: 64px;
     display: flex;
@@ -936,8 +947,115 @@ button:-moz-focusring,
     background-color: #38B2AC;
 }
 
-.salary-data__title, .payment-data__title {
+.salary-data__title,
+.payment-data__title {
     font-size: 1.125rem;
     line-height: 140%;
     font-weight: bold;
+}
+
+.salary-data__hint,
+.payment-data__hint {
+    font-size: 0.75rem;
+    line-height: 150%;
+    font-weight: bold;
+    color: #A0AEC0;
+}
+
+.salary-data__decor,
+.payment-data__decor {
+    padding: 5px 0;
+}
+
+.salary-data__money,
+.payment-data__money {
+    font-size: 1.125rem;
+    line-height: 150%;
+    font-weight: bold;
+}
+
+.invoices-data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.invoices-data__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+    width: 100%;
+}
+
+.invoices-data__header button {
+    width: 110px;
+}
+
+.invoices-data__title {
+    font-size: 1.125rem;
+    line-height: 140%;
+    font-weight: bold;
+}
+
+.invoices-data__list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.invoices-data__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.invoices-data__item span, .invoices-data__item b {
+    font-size: 0.75rem;
+    line-height: 150%;
+    font-weight: bold;
+}
+
+.invoices-data__item span {
+    color: #A0AEC0;
+}
+
+.invoices-data__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+}
+
+.invoices-data__info h5 {
+    font-size: 0.875rem;
+    line-height: 150%;
+    font-weight: bold;
+}
+
+.invoices-data__docs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.invoices-data__receipt {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 5px;
 }
