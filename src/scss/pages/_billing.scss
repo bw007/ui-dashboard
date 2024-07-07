@@ -1,7 +1,6 @@
 .billing {
 
-  &__container {
-  }
+  &__container {}
 
   &__c-card {
     max-width: 460px;
@@ -12,13 +11,18 @@
     overflow: hidden;
   }
 
-  &__salary {}
+  &__salary,
+  &__payment,
+  &__invoices {
+    background-color: $color-white;
+    color: $color-gray-700;
+    padding: 30px;
+  }
 
-  &__payment {}
-
-  &__invoices {}
-
-  &__c-card, &__salary, &__payment, &__invoices {
+  &__c-card,
+  &__salary,
+  &__payment,
+  &__invoices {
     border-radius: 15px;
   }
 }
@@ -27,6 +31,7 @@
   @include flex($fd: column);
   color: $color-white;
   padding: 22px;
+
   &__header {
     @include flex(space-between, center);
     width: 100%;
@@ -44,19 +49,22 @@
   &__info {
     @include flex($y: center, $g: 32px);
     width: 100%;
+
     p {
       @include font($font-xs, 150%, 400)
     }
+
     h2 {
       @include font($font-sm, 140%, bold);
     }
   }
 }
 
-.salary-data, .payment-data {
+.salary-data,
+.payment-data {
   max-width: 240px;
-  border-radius: 15px;
-  background-color: $color-white;
+  @include flex(center, center, column, 8px);
+
   &__icon {
     width: 64px;
     height: 64px;
@@ -64,10 +72,69 @@
     border-radius: 12px;
     background-color: $color-teal-400;
   }
+
   &__title {
     @include font($font-lg, 140%, bold);
   }
-  &__hint {}
-  &__decor {}
-  &__money {}
+
+  &__hint {
+    @include font($font-xs, 150%, bold);
+    color: $color-gray-400;
+  }
+
+  &__decor {
+    padding: 5px 0;
+  }
+
+  &__money {
+    @include font($font-lg, 150%, bold);
+  }
+}
+
+.invoices-data {
+  @include flex($fd: column, $g: 32px);
+  &__header {
+    @include flex(space-between, center);
+    width: 100%;
+
+    button {
+      width: 110px;
+    }
+  }
+
+  &__title {
+    @include font($font-lg, 140%, bold);
+  }
+
+  &__list {
+    width: 100%;
+    @include flex($fd: column, $g: 20px);
+  }
+
+  &__item {
+    width: 100%;
+    @include flex(space-between, center, $g: 10px);
+    span, b {
+      @include font($font-xs, 150%, bold);
+    }
+    span {
+      color: $color-gray-400;
+    }
+  }
+
+  &__info {
+    @include flex($fd: column);
+    h5 {
+      @include font($font-sm, 150%, bold);
+    }
+  }
+
+  &__docs {
+    @include flex(space-between, center, $g: 15px);
+  }
+
+  &__receipt {
+    cursor: pointer;
+    @include flex($g: 5px);
+  }
 }
