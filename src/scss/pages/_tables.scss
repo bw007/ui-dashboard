@@ -1,10 +1,11 @@
 .tables {
-  margin-top: 24px;
   @include flex($fd: column, $g: 24px);
+  width: 100%;
+
   &__holder {
     background-color: $color-white;
     border-radius: 15px;
-    padding: 28px 20px;
+    padding: 28px 20px 20px;
     width: 100%;
   }
 
@@ -23,6 +24,7 @@
     @include font($font-sm, 140%, 400);
     color: $color-gray-400;
     margin-bottom: 24px;
+
     b {
       margin-right: 4px;
       color: $color-gray-500;
@@ -59,6 +61,10 @@
 }
 
 .table-cell {
+  &__logo {
+    @include flex($y: center);
+  }
+
   h6 {
     @include font($font-sm, 140%, bold);
     color: $color-gray-700;
@@ -68,11 +74,13 @@
     @include font($font-sm, 140%, 400);
     color: $color-gray-500;
   }
+
   &__avatar {
     width: 40px;
     height: 40px;
     overflow: hidden;
     border-radius: 12px;
+
     img {
       width: 100%;
       height: 100%;
@@ -81,7 +89,7 @@
   }
 
   &__inner {
-    @include flex($fd: column); 
+    @include flex($fd: column);
   }
 
   &__status,
@@ -99,6 +107,7 @@
     padding: 0 10px;
     background-color: $color-gray-300;
     color: $color-white;
+
     &:hover {
       background-color: $color-gray-400;
     }
@@ -106,8 +115,10 @@
 
   &__edit {
     color: $color-teal-300;
+
     &:hover {
       color: $color-teal-700;
+
       img {
         opacity: 0.6;
       }
@@ -118,12 +129,14 @@
     @include font($font-sm, 140%, bold);
     color: $color-teal-300;
   }
+
   &__progress-bar {
     width: 125px;
     height: 3px;
     border-radius: 2px;
     position: relative;
     background-color: $color-gray-200;
+
     &::after {
       content: "";
       display: inline-block;
