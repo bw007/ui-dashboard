@@ -1,9 +1,25 @@
 .billing {
 
-  &__container {}
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) minmax(180px, 1fr) minmax(180px, 1fr) minmax(320px, 2fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+  &__card {}
+  &__salary {}
+  &__payment {}
+  &__invoices {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+  }
+  &__pay-method {
+    grid-column: 1 / 4;
+  }
 
   &__c-card {
-    max-width: 460px;
+    // max-width: 460px;
+    // min-width: 290px;
     background-image: url("../imgs/credit-card.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -13,16 +29,11 @@
 
   &__salary,
   &__payment,
-  &__invoices {
+  &__invoices,
+  &__pay-method {
     background-color: $color-white;
     color: $color-gray-700;
     padding: 30px;
-  }
-
-  &__c-card,
-  &__salary,
-  &__payment,
-  &__invoices {
     border-radius: 15px;
   }
 }
@@ -31,7 +42,7 @@
   @include flex($fd: column);
   color: $color-white;
   padding: 22px;
-
+  border-radius: 15px;
   &__header {
     @include flex(space-between, center);
     width: 100%;
@@ -62,7 +73,7 @@
 
 .salary-data,
 .payment-data {
-  max-width: 240px;
+  // max-width: 240px;
   @include flex(center, center, column, 8px);
 
   &__icon {
@@ -136,5 +147,43 @@
   &__receipt {
     cursor: pointer;
     @include flex($g: 5px);
+  }
+}
+
+.pay-method {
+  @include flex($fd: column, $g: 25px);
+  &__header {
+    @include flex(space-between, center);
+    width: 100%;
+    button {
+      width: 136px;
+    }
+  }
+  &__title {
+    @include font($font-sm, 140%, bold);
+  }
+  &__card-group {
+    @include flex(space-between, center);
+    width: 100%;
+  }
+  &__card {
+    cursor: pointer;
+    border: 1px solid $color-gray-200;
+    border-radius: 15px;
+    padding: 20px;
+    width: 49%;
+    @include flex(space-between, center, $g: 15px);
+    span {
+      @include font($font-sm, 140%, 400);
+      color: $color-gray-400;
+      margin-right: auto;
+    }
+  }
+  &__card-edit {
+    width: 20px;
+    height: 20px;
+    &:hover {
+      opacity: 0.75;
+    }
   }
 }
