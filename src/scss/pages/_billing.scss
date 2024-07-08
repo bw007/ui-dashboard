@@ -31,8 +31,6 @@
   }
 
   &__c-card {
-    // max-width: 460px;
-    // min-width: 290px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
     background-image: url("../imgs/credit-card.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -218,21 +216,27 @@
   }
 }
 
-.billing-info {
-  @include flex($fd: column, $g: 18px);
+.billing-info,
+.b-transaction {
+  @include flex($fd: column, $g: 20px);
 
   &__title {
     @include font($font-lg, 140%, bold);
   }
 
   &__list {
-    @include flex($fd: column, $g: 20px);
+    @include flex($fd: column, $g: 23px);
     width: 100%;
   }
 
   &__item {
-    @include flex(space-between);
+    @include flex(space-between, center, $g: 15px);
     width: 100%;
+  }
+}
+
+.billing-info {
+  &__item {
     background-color: $color-gray-100;
     padding: 25px;
     border-radius: 12px;
@@ -275,7 +279,6 @@
 }
 
 .b-transaction {
-  @include flex($fd: column, $g: 20px);
   &__header {
     @include flex(space-between);
     width: 100%;
@@ -287,24 +290,10 @@
     }
   }
 
-  &__title {
-    @include font($font-lg, 140%, bold);
-  }
-
   &__when {
     @include font($font-xs, 140%, bold);
     text-transform: uppercase;
     color: $color-gray-400;
-  }
-
-  &__list {
-    @include flex($fd: column, $g: 25px);
-    width: 100%;
-  }
-
-  &__item {
-    @include flex(space-between, center, $g: 15px);
-    width: 100%;
   }
 
   &__arrow {
@@ -327,8 +316,6 @@
     margin-right: auto;
     @include flex($fd: column, $g: 5px);
 
-    h5 {}
-
     span {
       @include font($font-xs, 140%, bold);
       color: $color-gray-400;
@@ -337,9 +324,11 @@
 
   &__money {
     @include font($font-sm, 140%, bold);
+
     &--danger {
       color: $color-red-500;
     }
+
     &--success {
       color: $color-green-400;
     }
