@@ -10,12 +10,14 @@ body {
 
 .main {
   flex-grow: 1;
+  margin: 0 auto;
   max-width: calc(100vw - 270px);
-  padding: 22px;
+  padding: 22px 22px 35px;
   height: 100%;
   &__scrollbar {
+    width: 100%;
+    margin-top: 23px;
     height: calc(100% - 53px);
-    margin-top: 24px;
     @extend %scrollbar;
   }
 }
