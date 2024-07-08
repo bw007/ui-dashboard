@@ -1159,36 +1159,43 @@ button:-moz-focusring,
     opacity: 0.75;
 }
 
-.billing-info {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.billing-info__title {
-    font-size: 1.125rem;
-    line-height: 140%;
-    font-weight: bold;
-}
-
-.billing-info__list {
+.billing-info,
+.b-transaction {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     gap: 20px;
+}
+
+.billing-info__title,
+.b-transaction__title {
+    font-size: 1.125rem;
+    line-height: 140%;
+    font-weight: bold;
+}
+
+.billing-info__list,
+.b-transaction__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 23px;
+    width: 100%;
+}
+
+.billing-info__item,
+.b-transaction__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
     width: 100%;
 }
 
 .billing-info__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-    gap: 0;
-    width: 100%;
     background-color: #EDF2F7;
     padding: 25px;
     border-radius: 12px;
@@ -1237,14 +1244,6 @@ button:-moz-focusring,
     color: #E53E3E;
 }
 
-.b-transaction {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .b-transaction__header {
     display: flex;
     justify-content: space-between;
@@ -1266,36 +1265,12 @@ button:-moz-focusring,
     font-weight: bold;
 }
 
-.b-transaction__title {
-    font-size: 1.125rem;
-    line-height: 140%;
-    font-weight: bold;
-}
-
 .b-transaction__when {
     font-size: 0.75rem;
     line-height: 140%;
     font-weight: bold;
     text-transform: uppercase;
     color: #A0AEC0;
-}
-
-.b-transaction__list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 25px;
-    width: 100%;
-}
-
-.b-transaction__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    gap: 15px;
-    width: 100%;
 }
 
 .b-transaction__arrow {
