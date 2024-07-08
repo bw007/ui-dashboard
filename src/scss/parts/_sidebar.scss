@@ -3,7 +3,7 @@
   box-sizing: border-box;
   height: 100%;
   @include flex($fd: column, $g: 25px);
-  padding: 44px 25px 10px;
+  padding: 44px 25px 15px;
   &__scrollbar {
     @extend %scrollbar;
     width: 100%;
