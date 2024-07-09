@@ -1199,6 +1199,7 @@ button:-moz-focusring,
     background-color: #EDF2F7;
     padding: 25px;
     border-radius: 12px;
+    align-items: flex-start;
 }
 
 .billing-info__address h6 {
@@ -1234,6 +1235,11 @@ button:-moz-focusring,
     font-size: 0.75rem;
     line-height: 140%;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .billing-info__operation button:hover {
