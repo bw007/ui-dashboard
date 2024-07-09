@@ -1,0 +1,211 @@
+extends ../layouts/dashboard.pug
+
+block content
+  main.main
+    include ../parts/_header.pug
+    .main__scrollbar
+      section.billing
+        .billing__container
+          .billing__c-card.c-card
+            .c-card__header
+              h3.c-card__name Purity UI
+              img.c-card__logo(src="./imgs/ms-card-circle.svg" alt="")
+            h1.c-card__number 7812 2139 0823 XXXX
+            .c-card__info
+              .c-card__expiration
+                p VALID THRU
+                h2 05/24
+              .c-card__cvv
+                p CVV
+                h2 09X
+          .billing__salary.salary-data
+            .salary-data__icon
+              img(src="./imgs/wallet-icon.svg" alt="")
+            h4.salary-data__title Salary
+            .salary-data__hint Belong Interactive
+            img.salary-data__decor(src="./imgs/card-line-decor.svg" alt="")
+            .salary-data__money +$2000
+          .billing__payment.payment-data
+            .payment-data__icon
+              img(src="./imgs/paypal-logo.svg" alt="")
+            h4.payment-data__title Paypal
+            .payment-data__hint Freelance Payment
+            img.payment-data__decor(src="./imgs/card-line-decor.svg" alt="")
+            .payment-data__money $455.00
+          .billing__invoices.invoices-data
+            .invoices-data__header
+              h4.invoices-data__title Invoices
+              button.btn.btn__plain.btn__plain--teal VIEW ALL
+            ul.invoices-data__list
+              li.invoices-data__item
+                .invoices-data__info
+                  h5 March, 01, 2020
+                  span #MS-415646
+                .invoices-data__docs
+                  span $180
+                  .invoices-data__receipt
+                    img(src="./imgs/file-dark-icon.svg" alt="")
+                    b PDF
+              li.invoices-data__item
+                .invoices-data__info
+                  h5 February, 10, 2021
+                  span #MS-415621
+                .invoices-data__docs
+                  span $220
+                  .invoices-data__receipt
+                    img(src="./imgs/file-dark-icon.svg" alt="")
+                    b PDF
+              li.invoices-data__item
+                .invoices-data__info
+                  h5 March, 07, 2024
+                  span #MS-415216
+                .invoices-data__docs
+                  span $420
+                  .invoices-data__receipt
+                    img(src="./imgs/file-dark-icon.svg" alt="")
+                    b PDF
+              li.invoices-data__item
+                .invoices-data__info
+                  h5 March, 01, 2020
+                  span #MS-415646
+                .invoices-data__docs
+                  span $180
+                  .invoices-data__receipt
+                    img(src="./imgs/file-dark-icon.svg" alt="")
+                    b PDF
+              li.invoices-data__item
+                .invoices-data__info
+                  h5 March, 01, 2020
+                  span #MS-415646
+                .invoices-data__docs
+                  span $180
+                  .invoices-data__receipt
+                    img(src="./imgs/file-dark-icon.svg" alt="")
+                    b PDF
+          .billing__pay-method.pay-method
+            .pay-method__header
+              .pay-method__title Payment Method
+              button.btn.btn__dark Add a new card
+            .pay-method__card-group
+              .pay-method__card
+                img(src="./imgs/ms-card-icon.svg" alt="")
+                span 7812 2139 0823 XXXX
+                .pay-method__card-edit
+                  img(src="./imgs/pencil-icon.svg" alt="")
+              .pay-method__card
+                img(src="./imgs/visa-logo.svg" alt="")
+                span 7812 2139 0823 XXXX
+                .pay-method__card-edit
+                  img(src="./imgs/pencil-icon.svg" alt="")
+          .billing__information.billing-info
+            h4.billing-info__title Billing Information
+            ul.billing-info__list
+              li.billing-info__item
+                .billing-info__address
+                  h6 Oliver Liam
+                  p
+                    span Company Name:
+                    | Viking Burrito
+                  p
+                    span Email Address:
+                    | oliver@burrito.com
+                  p
+                    span VAT Number:
+                    | FRB1235476
+                .billing-info__operation
+                  button.btn.btn__text.billing-info__remove
+                    img(src="./imgs/trash-icon.svg" alt="")
+                    | Delete
+                  button.btn.btn__text
+                    img(src="./imgs/pencil-icon.svg" alt="")
+                    | Edit
+              li.billing-info__item
+                .billing-info__address
+                  h6 Oliver Liam
+                  p
+                    span Company Name:
+                    | Viking Burrito
+                  p
+                    span Email Address:
+                    | oliver@burrito.com
+                  p
+                    span VAT Number:
+                    | FRB1235476
+                .billing-info__operation
+                  button.btn.btn__text.billing-info__remove
+                    img(src="./imgs/trash-icon.svg" alt="")
+                    | Delete
+                  button.btn.btn__text
+                    img(src="./imgs/pencil-icon.svg" alt="")
+                    | Edit
+              li.billing-info__item
+                .billing-info__address
+                  h6 Oliver Liam
+                  p
+                    span Company Name:
+                    | Viking Burrito
+                  p
+                    span Email Address:
+                    | oliver@burrito.com
+                  p
+                    span VAT Number:
+                    | FRB1235476
+                .billing-info__operation
+                  button.btn.btn__text.billing-info__remove
+                    img(src="./imgs/trash-icon.svg" alt="")
+                    | Delete
+                  button.btn.btn__text
+                    img(src="./imgs/pencil-icon.svg" alt="")
+                    | Edit
+          .billing__transaction.b-transaction
+            .b-transaction__header
+              h4.b-transaction__title Your Transactions
+              p
+                img(src="./imgs/outline.svg" alt="")
+                | 23 - 30 March 2020
+            p.b-transaction__when Newest
+            ul.b-transaction__list
+              li.b-transaction__item
+                .b-transaction__arrow.b-transaction__arrow--danger
+                  img(src="./imgs/danger-arrow-down.svg" alt="")
+                .b-transaction__item-info
+                  h5 Netflix
+                  span 27 March 2020, at 12:30 PM
+                .b-transaction__money.b-transaction__money--danger -$2500
+              li.b-transaction__item
+                .b-transaction__arrow.b-transaction__arrow--success
+                  img(src="./imgs/success-arrow-up.svg" alt="")
+                .b-transaction__item-info
+                  h5 Apple
+                  span 27 March 2020, at 12:30 PM
+                .b-transaction__money.b-transaction__money--success +$2500
+            p.b-transaction__when Yesterday
+            ul.b-transaction__list
+              li.b-transaction__item
+                .b-transaction__arrow.b-transaction__arrow--danger
+                  img(src="./imgs/danger-arrow-down.svg" alt="")
+                .b-transaction__item-info
+                  h5 Netflix
+                  span 27 March 2020, at 12:30 PM
+                .b-transaction__money.b-transaction__money--danger -$2500
+              li.b-transaction__item
+                .b-transaction__arrow.b-transaction__arrow--success
+                  img(src="./imgs/success-arrow-up.svg" alt="")
+                .b-transaction__item-info
+                  h5 Apple
+                  span 27 March 2020, at 12:30 PM
+                .b-transaction__money.b-transaction__money--success +$3500
+              li.b-transaction__item
+                .b-transaction__arrow.b-transaction__arrow--success
+                  img(src="./imgs/success-arrow-up.svg" alt="")
+                .b-transaction__item-info
+                  h5 Apple
+                  span 27 March 2020, at 12:30 PM
+                .b-transaction__money.b-transaction__money--success +$2500
+              li.b-transaction__item
+                .b-transaction__arrow.b-transaction__arrow--success
+                  img(src="./imgs/success-arrow-up.svg" alt="")
+                .b-transaction__item-info
+                  h5 Apple
+                  span 27 March 2020, at 12:30 PM
+                .b-transaction__money.b-transaction__money--success +$2500

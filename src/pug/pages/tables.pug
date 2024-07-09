@@ -3,3 +3,201 @@ extends ../layouts/dashboard.pug
 block content
   main.main
     include ../parts/_header.pug
+    .main__scrollbar
+      section.tables
+        //- Author table
+        .tables__holder
+          h4.tables__title Authors Table
+          table.tables__container.table
+            thead.table__head
+              tr.table__row.table__h-row
+                th.table__h-cell author
+                th.table__h-cell function
+                th.table__h-cell status
+                th.table__h-cell employed
+                th
+            tbody.table__body
+              tr.table__row
+                td.table__cell.table-cell
+                  .table-cell__avatar
+                    img(src="./imgs/table-user.png")
+                  .table-cell__inner
+                    h6 Laurent Michael
+                    span laurent@simmmple.com
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 Programmer
+                    span Developer
+                td.table__cell.table-cell
+                  button.table-cell__status.btn__success Online
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 14/06/21
+                td.table__cell.table-cell
+                  button.table-cell__edit Edit
+              tr.table__row
+                td.table__cell.table-cell
+                  .table-cell__avatar
+                    img(src="./imgs/table-user-2.png")
+                  .table-cell__inner
+                    h6 Alexa Liras
+                    span alexa@simmmple.com
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 Manager
+                    span Organization
+                td.table__cell.table-cell
+                  button.table-cell__status.btn__success Online
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 14/06/21
+                td.table__cell.table-cell
+                  button.table-cell__edit Edit
+              tr.table__row
+                td.table__cell.table-cell
+                  .table-cell__avatar
+                    img(src="./imgs/table-user-3.png")
+                  .table-cell__inner
+                    h6 Laurent Michael
+                    span laurent@simmmple.com
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 Manager
+                    span Organization
+                td.table__cell.table-cell
+                  button.table-cell__status.btn__success Online
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 14/06/21
+                td.table__cell.table-cell
+                  button.table-cell__edit Edit
+              tr.table__row
+                td.table__cell.table-cell
+                  .table-cell__avatar
+                    img(src="./imgs/table-user.png")
+                  .table-cell__inner
+                    h6 Laurent Michael
+                    span laurent@simmmple.com
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 Manager
+                    span Organization
+                td.table__cell.table-cell
+                  button.table-cell__status Online
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 14/06/21
+                td.table__cell.table-cell
+                  button.table-cell__edit Edit
+              tr.table__row
+                td.table__cell.table-cell
+                  .table-cell__avatar
+                    img(src="./imgs/table-user-2.png")
+                  .table-cell__inner
+                    h6 Laurent Michael
+                    span laurent@simmmple.com
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 Manager
+                    span Organization
+                td.table__cell.table-cell
+                  button.table-cell__status Online
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 14/06/21
+                td.table__cell.table-cell
+                  button.table-cell__edit Edit
+              tr.table__row
+                td.table__cell.table-cell
+                  .table-cell__avatar
+                    img(src="./imgs/table-user-3.png")
+                  .table-cell__inner
+                    h6 Laurent Michael
+                    span laurent@simmmple.com
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 Manager
+                    span Organization
+                td.table__cell.table-cell
+                  button.table-cell__status.btn__success Online
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    h6 14/06/21
+                td.table__cell.table-cell
+                  button.table-cell__edit Edit
+        //- Projects table
+        .tables__holder
+          h4.tables__title Projects
+          .tables__info
+            img(src="./imgs/circle.svg")
+            p
+              b 30 done
+              span this month
+          table.tables__container.table
+            thead.table__head
+              tr.table__row.table__h-row
+                th.table__h-cell companies
+                th.table__h-cell budget
+                th.table__h-cell status
+                th.table__h-cell completion
+            tbody.table__body
+              tr.table__row
+                td.table__cell.table-cell
+                  .table-cell__logo: img(src="./imgs/xd-logo.svg")
+                  h6 Chakra Soft UI Version
+                td.table__cell.table-cell: h6 $14,000
+                td.table__cell.table-cell: h6 Working
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    .table-cell__progress 60%
+                    .table-cell__progress-bar(data-progress="0")
+                td.table__cell.table-cell
+                  button.table-cell__edit: img(src="./imgs/point-icon.svg")
+              tr.table__row
+                td.table__cell.table-cell
+                  .table-cell__logo: img(src="./imgs/atlasian-logo.svg")
+                  h6 Add Progress Track
+                td.table__cell.table-cell: h6 $3,000
+                td.table__cell.table-cell: h6 Canceled
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    .table-cell__progress 10%
+                    .table-cell__progress-bar(data-progress="0")
+                td.table__cell.table-cell
+                  button.table-cell__edit: img(src="./imgs/point-icon.svg")
+              tr.table__row
+                td.table__cell.table-cell
+                  .table-cell__logo: img(src="./imgs/slack-logo.svg")
+                  h6 Fix Platform Errors
+                td.table__cell.table-cell: h6 No set
+                td.table__cell.table-cell: h6 Done
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    .table-cell__progress 100%
+                    .table-cell__progress-bar(data-progress="0")
+                td.table__cell.table-cell
+                  button.table-cell__edit: img(src="./imgs/point-icon.svg")
+              tr.table__row
+                td.table__cell.table-cell
+                  .table-cell__logo: img(src="./imgs/spotify-logo.svg")
+                  h6 Launch our Mobile App
+                td.table__cell.table-cell: h6 $32,000
+                td.table__cell.table-cell: h6 Done
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    .table-cell__progress 100%
+                    .table-cell__progress-bar(data-progress="0")
+                td.table__cell.table-cell
+                  button.table-cell__edit: img(src="./imgs/point-icon.svg")
+              tr.table__row
+                td.table__cell.table-cell
+                  .table-cell__logo: img(src="./imgs/jira-logo.svg")
+                  h6 Chakra Soft UI Version
+                td.table__cell.table-cell: h6 $400
+                td.table__cell.table-cell: h6 Working
+                td.table__cell.table-cell
+                  .table-cell__inner
+                    .table-cell__progress 25%
+                    .table-cell__progress-bar(data-progress="0")
+                td.table__cell.table-cell
+                  button.table-cell__edit: img(src="./imgs/point-icon.svg")
