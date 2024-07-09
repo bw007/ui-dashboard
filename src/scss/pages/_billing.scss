@@ -240,6 +240,7 @@
     background-color: $color-gray-100;
     padding: 25px;
     border-radius: 12px;
+    align-items: flex-start
   }
 
   &__address {
@@ -266,7 +267,7 @@
     button {
       background-color: transparent;
       @include font($font-xs, 140%, bold);
-
+      @include flex(center, center, $g: 10px);
       &:hover {
         opacity: 0.75;
       }
